@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+/* Navbar */
+
+.navbar-content{
+    background-color: rgb(192, 173, 126);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-content h1 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    transition: all 0.4s ease-in-out;
+    cursor: default;
+}
+
+.list-all ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.list-all li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    color: black;
+    transform: scale(1.1);
+    text-shadow: 
+        2px 2px 5px white,
+        -2px -2px 5px white,
+        2px -2px 5px white,
+        -2px 2px 5px white;
+}
+
+/* Section 1 */
+
+.image-section-one {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.image-section-one img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-section-one h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    text-shadow: 
+        2px 2px 8px rgba(0,0,0,0.8),
+        -2px -2px 8px rgba(0,0,0,0.6);
+}
+
+.image-section-one p {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 600;
+    text-shadow: 
+        1px 1px 6px rgba(0,0,0,0.8),
+        -1px -1px 6px rgba(0,0,0,0.6);
+}
+
+/* Section 2 */
+.section-two{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    padding: 30px;
+}
+
+.paragraph-two{
+    text-align: center;
+    width: 40%;
+}
+
+.paragraph-two p{
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.paragraph-two h2{
+    font-size: 2rem;
+}
+
+/* Section 3 */
+.three{
+    background-color: bisque;
+    padding: 30px;
+}
+
+.section-three {
+    justify-content: center;
+    width: auto;
+    display: flex;
+    padding: 40px;
+}
+
+.all-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card-three {
+    background-color: rgb(179, 148, 93);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-three:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card-three img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card-three h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.card-three li {
+    font-size: 20px;
+}
+
+.head-tokoh{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+/* Section Negara */
+
+.portugis-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    width: auto;
+    min-height: 100vh;
+    padding: 3rem;
+    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6); /* nuansa kertas tua */
+    font-size: 1.2rem;
+}
+
+/* Card */
+.portugis-main {
+    background: rgba(255, 248, 220, 0.95); /* mirip kertas antik */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portugis-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+.portugis-main h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-family: "Georgia", serif;
+    color: #4b2e1f;
+}
+
+.portugis-main h4 {
+    color: #3b2b1a;
+    line-height: 1.6;
+}
