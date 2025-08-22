@@ -125,15 +125,15 @@ a:hover {
 }
 
 .section-three {
-    width: 100%;
+    height: auto;
     padding: 40px;
+    /* Hapus flex supaya grid bisa full */
 }
 
 .all-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem; /* jarak antar card */
-    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem; /* jarak dari kiri kanan */
 }
@@ -198,18 +198,18 @@ a:hover {
 
 .portugis-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 2rem;
     width: auto;
     min-height: 100vh;
     padding: 3rem;
-    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6);
+    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6); /* nuansa kertas tua */
     font-size: 1.2rem;
 }
 
 /* Card */
 .portugis-main {
-    background: rgba(255, 248, 220, 0.95);
+    background: rgba(255, 248, 220, 0.95); /* mirip kertas antik */
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
