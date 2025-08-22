@@ -112,7 +112,6 @@ a:hover {
 
 .paragraph-two p{
     margin-top: 15px;
-    font-size: 25px;
 }
 
 .paragraph-two h2{
@@ -120,36 +119,50 @@ a:hover {
 }
 
 /* Section 3 */
-.three{
+.three {
     background-color: bisque;
     padding: 30px;
 }
 
 .section-three {
-    justify-content: center;
-    width: auto;
-    display: flex;
+    width: 100%;
     padding: 40px;
 }
 
 .all-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 5rem;
-    width: 100%;
-    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; /* jarak antar card */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem; /* jarak dari kiri kanan */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .all-card {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1.5rem;
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .all-card {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
 }
 
 .card-three {
-    background-color: rgb(179, 148, 93);
+    background-color: rgba(179, 148, 93, 0.8); /* transparan dikit */
     border-radius: 15px;
     padding: 20px;
-    width: 100%;
-    height: auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .card-three:hover {
     transform: translateY(-8px);
@@ -185,18 +198,18 @@ a:hover {
 
 .portugis-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     width: auto;
     min-height: 100vh;
     padding: 3rem;
-    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6); /* nuansa kertas tua */
+    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6);
     font-size: 1.2rem;
 }
 
 /* Card */
 .portugis-main {
-    background: rgba(255, 248, 220, 0.95); /* mirip kertas antik */
+    background: rgba(255, 248, 220, 0.95);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
@@ -216,7 +229,7 @@ a:hover {
     color: #4b2e1f;
 }
 
-.portugis-main h4 {
+.portugis-main p {
     color: #3b2b1a;
     line-height: 1.6;
 }
