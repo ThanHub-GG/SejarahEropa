@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Poppins;
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -97,28 +98,35 @@ a:hover {
 }
 
 /* Section 2 */
-.section-two{
-    height: auto;
+.section-two {
+    min-height: 50vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: beige;
     padding: 30px;
 }
 
-.paragraph-two{
+.paragraph-two {
     text-align: center;
-    width: 40%;
+    max-width: 800px;
+    width: 90%;
 }
 
-.paragraph-two p{
-    margin-top: 15px;
-}
-
-.paragraph-two h2{
+.paragraph-two h2 {
     font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-/* Section 3 */
+.paragraph-two p {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* SECTION 3 */
 .three {
     background-color: bisque;
     padding: 30px;
@@ -127,18 +135,18 @@ a:hover {
 .section-three {
     height: auto;
     padding: 40px;
-    /* Hapus flex supaya grid bisa full */
 }
+
+
 
 .all-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem; /* jarak antar card */
+    gap: 2rem; 
     margin: 0 auto;
-    padding: 0 2rem; /* jarak dari kiri kanan */
+    padding: 0 2rem; 
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
     .all-card {
         grid-template-columns: repeat(2, 1fr);
@@ -146,7 +154,6 @@ a:hover {
     }
 }
 
-/* HP */
 @media (max-width: 600px) {
     .all-card {
         grid-template-columns: 1fr;
@@ -155,7 +162,7 @@ a:hover {
 }
 
 .card-three {
-    background-color: rgba(179, 148, 93, 0.8); /* transparan dikit */
+    background-color: rgba(179, 148, 93, 0.8);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -198,18 +205,18 @@ a:hover {
 
 .portugis-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     width: auto;
     min-height: 100vh;
     padding: 3rem;
-    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6); /* nuansa kertas tua */
+    background: linear-gradient(to bottom, #f4e1c1, #e5d0a6);
     font-size: 1.2rem;
 }
 
 /* Card */
 .portugis-main {
-    background: rgba(255, 248, 220, 0.95); /* mirip kertas antik */
+    background: rgba(255, 248, 220, 0.95);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
@@ -218,7 +225,7 @@ a:hover {
 }
 
 .portugis-main:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.35);
 }
 
@@ -232,4 +239,48 @@ a:hover {
 .portugis-main p {
     color: #3b2b1a;
     line-height: 1.6;
+}
+
+/* Revolution  */
+
+.revolusi-content{
+    width: auto;
+    height: auto;
+    background-color: #dfbe7d;
+    padding: 30px;
+    padding-bottom: 20vh;
+    text-align: center;
+}
+
+.revolusi-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.revolusi-all p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.revolusi-all{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card-revolusi{
+    margin-top: 50px;
+    background-color: #d3a956;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-revolusi:hover {
+    transform: translate(-5px, -10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
 }
