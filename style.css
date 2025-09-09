@@ -137,8 +137,6 @@ a:hover {
     padding: 40px;
 }
 
-
-
 .all-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -169,7 +167,6 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .card-three:hover {
     transform: translateY(-8px);
@@ -205,7 +202,7 @@ a:hover {
 
 .portugis-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: auto;
     min-height: 100vh;
@@ -214,7 +211,12 @@ a:hover {
     font-size: 1.2rem;
 }
 
-/* Card */
+@media (max-width: 768px) {
+    .portugis-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 .portugis-main {
     background: rgba(255, 248, 220, 0.95);
     padding: 2rem;
@@ -222,11 +224,24 @@ a:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .portugis-main:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .portugis-main h2 {
@@ -245,7 +260,7 @@ a:hover {
 
 .revolusi-content{
     width: auto;
-    height: auto;
+    height: 100%;
     background-color: #dfbe7d;
     padding: 30px;
     padding-bottom: 20vh;
@@ -261,21 +276,21 @@ a:hover {
 
 .revolusi-all p {
     font-family: 'Lora', serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
 }
 
 
 .revolusi-all{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .card-revolusi{
     margin-top: 50px;
     background-color: #d3a956;
-    padding: 20px;
+    padding: 50px;
+    width: 50%;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
